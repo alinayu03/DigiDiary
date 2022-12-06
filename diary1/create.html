@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create Entry
+{% endblock %}
+
+{% block main %}
+    <form action="/create" method="post">
+        <div class="mb-3">
+            <label for="date">Entry date:</label>
+            <input class="form-control mx-auto w-auto" type="datetime-local" id="date" name="date">
+        </div>
+        <div class="mb-3">
+            <label for="title" class="form-label mx-auto w-auto">Title of your entry:</label>
+            <input class="form-control mx-auto w-auto" id="title" name="title" placeholder="..." type="text">
+        </div>
+        <div class="mb-3">
+            <label for="entries" class="form-label mx-auto w-auto">Write about your day!</label>
+            <textarea class="form-control mx-auto w-auto" id="entries" name="entries" placeholder="..." rows="8"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="mood" class="form-label mx-auto w-auto">What was your mood for today?</label>
+            <input class="form-control mx-auto w-auto" id="mood" name="mood" placeholder="..." type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Create</button>
+    </form>
+{% endblock %}
